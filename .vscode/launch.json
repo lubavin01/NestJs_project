@@ -8,10 +8,18 @@
       "type": "node",
       "request": "launch",
       "name": "Launch Program",
+      "sourceMaps": true,
       "skipFiles": [
         "<node_internals>/**"
       ],
-      "program": "${file}"
+      // "program": "${file}",
+      "runtimeArgs": [
+        "-r",
+        "ts-node/register"
+      ],
+      "args": [
+        "${workspaceFolder}\\src\\main.ts"
+      ],
     }
   ]
 }
